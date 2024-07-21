@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
-// import heroImage from '../assets/hero-image.jpg'; 
-// import languageMapImage from '../assets/language-map.jpg'; 
+import heroImage from '../assets/1.png'; 
+import languageMapImage from '../assets/2.png'; 
 
 function Home() {
   return (
     <div className="home">
       <header className="hero">
-        {/* <img src={heroImage} alt="African Landscape" className="hero-image" /> */}
+        <img src={heroImage} alt="African Landscape" className="hero-image" />
         <div className="hero-text">
-          <h1>Babel Africa</h1>
+          <h1>Chat Africa AI</h1>
           <p>Bridging languages, connecting cultures</p>
         </div>
       </header>
@@ -24,9 +24,9 @@ function Home() {
           <Link to="/chat" className="cta-button primary">Start Translating</Link>
           <Link to="/map" className="cta-button secondary">Explore Language Map</Link>
         </div>
-        {/* <div className="image-section">
+        <div className="image-section">
           <img src={languageMapImage} alt="Language Map of Africa" className="map-image" />
-        </div> */}
+        </div>
       </section>
       <footer className="footer">
         <p>Celebrating the linguistic diversity of Africa</p>
