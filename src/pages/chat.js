@@ -39,7 +39,7 @@ const chain = new LLMChain({
 function ChatComponent() {
   const [text, setText] = useState("");
   const [inputlanguage, setInputlanguage] = useState("English");
-  const [outputlanguage, setOutputlanguage] = useState("French");
+  const [outputlanguage, setOutputlanguage] = useState("Oshiwambo");
   const [translation, setTranslation] = useState("");
   const [isdisabled, setIsdisabled] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -108,7 +108,7 @@ function ChatComponent() {
     setTranslation("");
     setIsdisabled(false);
     handleInputClick("English");
-    handleOutputClick("French");
+    handleOutputClick("Shona");
   };
 
   const handleSwitch = () => {
@@ -119,12 +119,12 @@ function ChatComponent() {
         handleOutputClick("English");
         break;
       }
-      case "Chinese": {
-        handleOutputClick("Chinese");
+      case "Oshiwambo": {
+        handleOutputClick("Oshiwambo");
         break;
       }
-      case "French": {
-        handleOutputClick("French");
+      case "Shona": {
+        handleOutputClick("Shona");
         break;
       }
       default: {
@@ -137,12 +137,12 @@ function ChatComponent() {
         handleInputClick("English");
         break;
       }
-      case "Chinese": {
-        handleInputClick("Chinese");
+      case "Oshiwambo": {
+        handleInputClick("Oshiwambo");
         break;
       }
-      case "French": {
-        handleInputClick("French");
+      case "Shona": {
+        handleInputClick("Shona");
         break;
       }
       default: {
@@ -156,13 +156,13 @@ function ChatComponent() {
     switch (value) {
       case "English": {
         setEng(true);
-        setChi(false);
+        setChi(false); 
         setDut(false);
         setFre(false);
         setInputlanguage(value);
         break;
       }
-      case "French": {
+      case "Oshiwambo": {
         setFre(true);
         setChi(false);
         setEng(false);
@@ -170,7 +170,7 @@ function ChatComponent() {
         setInputlanguage(value);
         break;
       }
-      case "Chinese": {
+      case "Shona": {
         setChi(true);
         setEng(false);
         setDut(false);
@@ -197,7 +197,7 @@ function ChatComponent() {
         setOutputlanguage(value);
         break;
       }
-      case "French": {
+      case "Oshiwambo": {
         setOUtEng(false);
         setOutChi(false);
         setOutDut(false);
@@ -205,7 +205,7 @@ function ChatComponent() {
         setOutputlanguage(value);
         break;
       }
-      case "Chinese": {
+      case "Shona": {
         setOUtEng(false);
         setOutChi(true);
         setOutDut(false);
@@ -271,16 +271,16 @@ function ChatComponent() {
                 English
               </a>
               <a
-                onClick={() => handleInputClick("French")}
+                onClick={() => handleInputClick("Oshiwambo")}
                 className={fre ? "active" : null}
               >
-                French
+                Oshiwambo
               </a>
               <a
-                onClick={() => handleInputClick("Chinese")}
+                onClick={() => handleInputClick("Shona")}
                 className={chi ? "active" : null}
               >
-                Chinese
+                Shona
               </a>
 
               <a onClick={() => handleInputClick("Other")}>
@@ -343,16 +343,16 @@ function ChatComponent() {
                 English
               </a>
               <a
-                onClick={() => handleOutputClick("French")}
+                onClick={() => handleOutputClick("Oshiwambo")}
                 className={freOut ? "active" : null}
               >
-                French
+                Oshiwambo
               </a>
               <a
-                onClick={() => handleOutputClick("Chinese")}
+                onClick={() => handleOutputClick("Shona")}
                 className={chiOut ? "active" : null}
               >
-                Chinese
+                Shona
               </a>
 
               <a onClick={() => handleOutputClick("Other")}>
